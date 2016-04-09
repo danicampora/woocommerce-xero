@@ -1,0 +1,201 @@
+# Copyright (C) 2015 WooCommerce Xero Integration
+# This file is distributed under the same license as the WooCommerce Xero Integration package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Xero Integration 1.6.7\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/woocommerce-xero\n"
+"POT-Creation-Date: 2015-08-07 14:00:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: classes/class-wc-xr-invoice-manager.php:50
+msgid ""
+"XERO: Didn't create invoice because total is 0 and send order with zero "
+"total is set to off."
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:80
+msgid "Xero Invoice created.  "
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:88
+msgid "None"
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:91
+msgid "ERROR creating Xero invoice: "
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:92
+msgid " ErrorNumber: "
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:93
+msgid " ErrorType: "
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:94
+msgid " Message: "
+msgstr ""
+
+#: classes/class-wc-xr-invoice-manager.php:95
+msgid " Detail: "
+msgstr ""
+
+#: classes/class-wc-xr-order-actions.php:36
+msgid "Send Invoice to Xero"
+msgstr ""
+
+#: classes/class-wc-xr-order-actions.php:37
+msgid "Send Payment to Xero"
+msgstr ""
+
+#: classes/class-wc-xr-payment-manager.php:60
+msgid "Xero Payment created.  "
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:21
+msgid "Consumer Key"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:27
+msgid "Consumer Secret"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:34
+msgid "Private Key"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:40
+msgid "Public Key"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:47
+msgid "Invoice Prefix"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:54
+msgid "Sales Account"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:60
+msgid "Discount Account"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:66
+msgid "Shipping Account"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:72
+msgid "Payment Account"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:78
+msgid "Rounding Account"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:85
+msgid "Orders with zero total"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:91
+msgid "Auto Send Invoices"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:97
+msgid "Auto Send Payments"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:103
+msgid "Send Inventory Items"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:109
+msgid "Debug"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:145
+msgid "Xero Settings"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:172
+msgid "Xero"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:193
+msgid "Xero for WooCommerce"
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:197
+msgid "Your settings have been saved."
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:200
+msgid "There was an error saving your settings."
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:216
+msgid ""
+"Settings for your Xero account including security keys and default account "
+"numbers.<br/> <strong>All</strong> text fields are required for the "
+"integration to work properly."
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:230
+msgid "Key file found."
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:232
+msgid "Key file not found."
+msgstr ""
+
+#: classes/class-wc-xr-settings.php:234
+msgid ""
+"  This setting should include the absolute path to the file which might "
+"include working directory: "
+msgstr ""
+
+#: woocommerce-xero.php:129
+msgid ""
+"WooCommerce Xero Integration requires WooCommerce 2.2.0 or higher to be "
+"installed and activated!"
+msgstr ""
+
+#: woocommerce-xero.php:144
+msgid "Settings"
+msgstr ""
+
+#: woocommerce-xero.php:145
+msgid "Support"
+msgstr ""
+
+#: woocommerce-xero.php:146
+msgid "Documentation"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Xero Integration"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://woothemes.com/woocommerce"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Integrates <a href=\"http://www.woothemes.com/woocommerce\" target=\"_blank"
+"\" >WooCommerce</a> with the <a href=\"http://www.xero.com\" target=\"_blank"
+"\">Xero</a> accounting software."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woothemes.com"
+msgstr ""

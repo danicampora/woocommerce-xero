@@ -12,7 +12,7 @@ class WC_XR_Request_Contact extends WC_XR_Request {
 		$this->set_method( 'GET' );
 		$this->set_endpoint( 'Contacts' );
 		$this->set_query( array(
-			'where' => 'EmailAddress=="' . $email . '"',
+			'where' => 'EmailAddress!=null&&EmailAddress=="' . $email . '"',
 		) );
 	}
 

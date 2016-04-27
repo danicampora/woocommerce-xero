@@ -11,6 +11,14 @@ class WC_XR_Line_Item_Manager {
 	 */
 	private $settings;
 
+	private $eu_countries_code = array('BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV',
+                                       'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE');
+
+    private $eu_countries = array('Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark',
+                                  'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy',
+                                  'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal',
+                                  'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden');
+
 	/**
 	 * WC_XR_Line_Item_Manager constructor.
 	 *
@@ -38,7 +46,17 @@ class WC_XR_Line_Item_Manager {
 		if ( count( $items ) > 0 ) {
 
 			// Get the sales account
-			$sales_account = $this->settings->get_option( 'sales_account' );
+			if (in_array($order->billing_country, $this->eu_countries_code) ||
+			    in_array($order->billing_country, $this->eu_countries)) {
+                $sales_account = $this->settings->get_option( 'sales_account_EU' );
+            } elseif (($order->billing_country === 'UK') ||
+                      ($order->billing_country === 'GB') ||
+                      ($order->billing_country === 'United Kingdom') ||
+                      ($order->billing_country === 'United Kingdom (UK)')) {
+                $sales_account = $this->settings->get_option( 'sales_account_UK' );
+            } else {
+                $sales_account = $this->settings->get_option( 'sales_account_world' );
+            }
 
 			// Check we need to send sku's
 			$send_inventory = ( ( 'on' === $this->settings->get_option( 'send_inventory' ) ) ? true : false );
@@ -89,9 +107,7 @@ class WC_XR_Line_Item_Manager {
 
 				// Add Line Item to array
 				$line_items[] = $line_item;
-
 			}
-
 		}
 
 		return $line_items;
@@ -152,7 +168,14 @@ class WC_XR_Line_Item_Manager {
 			$line_item = new WC_XR_Line_Item( $this->settings );
 
 			// Shipping Description
-			$line_item->set_description( 'Shipping Charge' );
+			$line_item->set_description( 'Shipping Charge' . ' ' .
+			                             'SHIPPING TO:' . ' ' .
+                                         $order->shipping_first_name . ' ' . $order->shipping_last_name .  ' ' . ' ' .
+                                         $order->shipping_address_1 .  ' ' . ' ' .
+                                         $order->shipping_address_2 .  ' ' . ' ' .
+                                         $order->shipping_postcode . ' ' . $order->shipping_city .  ' ' . ' ' .
+                                         $order->shipping_state .  ' ' . ' ' .
+                                         $order->shipping_country);
 
 			// Shipping Quantity
 			$line_item->set_quantity( 1 );

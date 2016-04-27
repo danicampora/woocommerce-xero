@@ -188,7 +188,9 @@ abstract class WC_XR_Request {
 		     ( '' === $this->settings->get_option( 'consumer_secret' ) ) ||
 		     ( '' === $this->settings->get_option( 'private_key' ) ) ||
 		     ( '' === $this->settings->get_option( 'public_key' ) ) ||
-		     ( '' === $this->settings->get_option( 'sales_account' ) ) ||
+		     ( '' === $this->settings->get_option( 'sales_account_UK' ) ) ||
+		     ( '' === $this->settings->get_option( 'sales_account_EU' ) ) ||
+		     ( '' === $this->settings->get_option( 'sales_account_world' ) ) ||
 		     ( '' === $this->settings->get_option( 'discount_account' ) ) ||
 		     ( '' === $this->settings->get_option( 'shipping_account' ) ) ||
 		     ( '' === $this->settings->get_option( 'payment_account' ) )

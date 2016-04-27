@@ -55,11 +55,23 @@ class WC_XR_Settings {
 				'description' => __(  'Allow you to prefix all your invoices.', 'wc-xero' ),
 			),
 			// Accounts
-			'sales_account'      => array(
-				'title'       => __( 'Sales Account', 'wc-xero' ),
+			'sales_account_UK'    => array(
+				'title'       => __( 'Sales Account UK', 'wc-xero' ),
 				'default'     => '',
 				'type'        => 'text',
-				'description' => __(  'Code for Xero account to track sales.', 'wc-xero' ),
+				'description' => __(  'Code for Xero account to track sales in the UK.', 'wc-xero' ),
+			),
+    	   	'sales_account_EU'    => array(
+				'title'       => __( 'Sales Account EU', 'wc-xero' ),
+				'default'     => '',
+				'type'        => 'text',
+				'description' => __(  'Code for Xero account to track sales in Europe.', 'wc-xero' ),
+			),
+            		'sales_account_world' => array(
+				'title'       => __( 'Sales Account rest of the world', 'wc-xero' ),
+				'default'     => '',
+				'type'        => 'text',
+				'description' => __(  'Code for Xero account to track sales in the rest of the world.', 'wc-xero' ),
 			),
 			'discount_account'   => array(
 				'title'       => __( 'Discount Account', 'wc-xero' ),

@@ -168,13 +168,13 @@ class WC_XR_Line_Item_Manager {
 			$line_item = new WC_XR_Line_Item( $this->settings );
 
 			// Shipping Description
-			$line_item->set_description( 'Shipping Charge' . ' ' .
-			                             'SHIPPING TO:' . ' ' .
-                                         $order->shipping_first_name . ' ' . $order->shipping_last_name .  ' ' . ' ' .
-                                         $order->shipping_address_1 .  ' ' . ' ' .
-                                         $order->shipping_address_2 .  ' ' . ' ' .
-                                         $order->shipping_postcode . ' ' . $order->shipping_city .  ' ' . ' ' .
-                                         $order->shipping_state .  ' ' . ' ' .
+			$line_item->set_description( 'Shipping: ' . $order->get_shipping_method() . '  ' .
+			                             'SHIPPING TO:' . '               ' .
+                                         $order->shipping_first_name . ' ' . $order->shipping_last_name .  '   ' .
+                                         $order->shipping_address_1 .  '    ' .
+                                         $order->shipping_address_2 .  '    ' .
+                                         $order->shipping_postcode . ' ' . $order->shipping_city .  '    ' .
+                                         $order->shipping_state .  '        ' .
                                          $order->shipping_country);
 
 			// Shipping Quantity
